@@ -1,0 +1,2 @@
+module RealcumpusHelper
+end
