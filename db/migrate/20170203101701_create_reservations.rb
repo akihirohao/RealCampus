@@ -2,7 +2,9 @@ class CreateReservations < ActiveRecord::Migration
   def change
     create_table :reservations do |t|
 
-      t.timestamps null: false
+      t.datetime      :time
+      t.integer       :status
+
     end
   end
 end
