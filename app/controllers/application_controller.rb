@@ -9,4 +9,19 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :phone_number, :avatar, :department])
   end
 
+# サインアウト後につながるURL
+  def after_sign_out_path_for resource
+    root_path
+  end
+
+# サインイン後につながるURL（user）
+  def after_sign_in_path_for(resource)
+    realcumpus_user_reservation_search_path
+  end
+
+# サインイン後につながるURL（student）
+  def after_sign_in_path_for(resource)
+    realcumpus_student_reservation_new_path
+  end
+
 end

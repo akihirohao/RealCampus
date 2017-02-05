@@ -16,11 +16,11 @@ Rails.application.routes.draw do
 
   get 'realcumpus'                         => 'top#index'
   get 'realcumpus/top/select'                  => 'top#select'
-  get 'realcumpus/student_reservation/create'  => 'student_reservation#create'
-  get 'realcumpus/student_reservation/new'     => 'student_reservation#new'
-  get 'realcumpus/user_reservation/index'      => 'user_reservation#index'
-  get 'realcumpus/user_reservation/new'        => 'user_reservation#new'
-  get 'realcumpus/user_reservation/search'     => 'user_reservation#search'
-  get 'realcumpus/user_reservation/show'       => 'user_reservation#show'
+  get 'realcumpus/student_reservation/create'  => 'student_reservations#create'
+  get 'realcumpus/student_reservation/new'     => 'student_reservations#new'
+  get 'realcumpus/user_reservation/index'      => 'user_reservations#index'
+  get 'realcumpus/user_reservation/new'        => 'user_reservations#new'
+  get 'realcumpus/user_reservation/search'     => 'user_reservations#search'
+  get 'realcumpus/user_reservation/show'       => 'user_reservations#show'
 
 end

@@ -6,6 +6,7 @@ class Student < ActiveRecord::Base
 
   has_many :reservations
   has_many :users
+  has_many :chats
 
   has_attached_file :avatar,
                   styles:  {medium: "300x300", thumb: "300x300#"}
