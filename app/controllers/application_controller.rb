@@ -14,14 +14,13 @@ class ApplicationController < ActionController::Base
     root_path
   end
 
-# サインイン後につながるURL（user）
+# サインイン後につながるURL（user&student）
   def after_sign_in_path_for(resource)
-    realcumpus_user_reservation_search_path
-  end
-
-# サインイン後につながるURL（student）
-  def after_sign_in_path_for(resource)
-    realcumpus_student_reservation_new_path
+    if params[:student]
+      new_student_reservation_path
+    elsif params[:user]
+      search_user_reservations_path
+    end
   end
 
 end

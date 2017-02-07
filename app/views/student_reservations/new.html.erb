@@ -1,26 +1,12 @@
-<h1>Shift Table</h1>
+<h1>案内時間 登録フォーム</h1>
 
 <!-- carender機能 -->
 
+<%= form_for @reservation, url: student_reservations_path  do |f| %>
 
+  <p>案内できる時間を登録しよ！</p>
+  <%= f.date_field :time %>
+  <%= f.hidden_field :status, value: 0%>
+  <%= f.submit %>
 
-
-<%= form_for [@reservation] do |f| %>
-
-<div class="form_box">
-        <h2>学生<span>新規登録</span></h2>
-
-          <div class="label"><%= f.label :date %><br />
-          <%= f.text_field :date, :placeholder=> '日付を入力！' %></div>
-
-          <div class="label"><%= f.label :time %><br />
-          <%= f.text_field :time, :placeholder=> '時間を入力！' %></div>
-
-          <div class="actions">
-          <%= button_tag type: "submit" do %>登録する<% end %>
-          </div>
-        <% end %>
-        </div>
-
-
-<%= link_to 'OK!', realcumpus_student_reservation_create_path %>
+<% end %>

@@ -14,13 +14,13 @@ Rails.application.routes.draw do
 
   root :to => 'top#index'
 
-  get 'realcumpus'                         => 'top#index'
-  get 'realcumpus/top/select'                  => 'top#select'
-  get 'realcumpus/student_reservation/create'  => 'student_reservations#create'
-  get 'realcumpus/student_reservation/new'     => 'student_reservations#new'
-  get 'realcumpus/user_reservation/index'      => 'user_reservations#index'
-  get 'realcumpus/user_reservation/new'        => 'user_reservations#new'
-  get 'realcumpus/user_reservation/search'     => 'user_reservations#search'
-  get 'realcumpus/user_reservation/show'       => 'user_reservations#show'
+  resources :top, only: :index
+
+  resources :user_reservations, only: [:index, :new, :show] do
+    collection do
+    get 'search'
+    end
+  end
+  resources :student_reservations, only: [:new, :create]
 
 end

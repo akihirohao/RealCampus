@@ -1,5 +1,19 @@
-<p>student(1)-photo</p>
-<p>student-name</p>
-<p>日程の詳細</p>
+
+<h1>最終確認</h1>
+<!-- 検索された時間を表示する -->
+<%= @time %>
+
+<!-- 指定されたstudentのnicknameとavatarを表示する -->
+<%= @user.nickname %>
+<%= @user.avatar %>
+
+<!-- 後で集合場所の写真をリンクに貼る -->
 <p>集合場所・地図</p>
-<%= button_to "OK?", :action => "show" %>
+
+<!-- "マッチング！"ボタンが押されると,statusが1に,user_idがログイン中のidに更新される -->
+<%= form_for @reservation, url: user_reservation_path  do |f| %>
+  <p>最終確認！</p>
+  <%= f.hidden_field :status, value: 1 %>
+  <%= f.hidden_field :user_id, value:"#{current_user_id}" %>
+  <%= f.submit 'マッチング！' %>
+<% end %>

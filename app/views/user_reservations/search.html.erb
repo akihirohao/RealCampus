@@ -2,4 +2,14 @@
 
 <%= image_tag 'images.jpg', class:"california_uni_img" %>
 
+<p>日程変更！</p>
+<%= search_form_for @times, url: user_reservations_path do |f| %>
+
+  <%= f.label :time_cont, '時間'  %>
+  <%= f.date_field :time_cont, class: "form-control", placeholder: "マッチング" %>
+
+  <%= f.submit '検索しますね！' %>
+
+<% end %>
+
 <!-- <Form>日程と要件</Form> -->

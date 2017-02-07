@@ -8,7 +8,7 @@
 
       <% if user_signed_in? %>
         <div class="user_nav grid-6">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          <%= link_to "ユーザーログアウト", destroy_user_session_path, method: :delete %>
           <a class="post" href="/realcumpus">キャンパスに行く</a>
         </div>
       <% else %>
@@ -17,6 +17,21 @@
           <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
         </div>
       <% end %>
+
+
+      <% if student_signed_in? %>
+        <div class="student_nav grid-6">
+          <%= link_to "学生ログアウト", destroy_student_session_path, method: :delete %>
+          <a class="post" href="/realcumpus">キャンパスに行く</a>
+        </div>
+      <% else %>
+        <div class="grid-6">
+          <%= link_to "学生ログイン", new_student_session_path, class: 'post' %>
+          <%= link_to "新規登録（学生）", new_student_registration_path, class: 'post' %>
+        </div>
+      <% end %>
+
+
     </div>
   </header>
 

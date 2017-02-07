@@ -5,7 +5,7 @@ class TopController < ApplicationController
 
   end
 
-  def select
+  def show
 
   end
 
