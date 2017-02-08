@@ -49,3 +49,7 @@ end
 gem 'devise'
 gem 'paperclip'
 gem 'ransack'
+
+group :production, :staging do
+  gem 'rails_12factor'
+end
