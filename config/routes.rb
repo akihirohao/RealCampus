@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   resources :top, only: :index
 
-  resources :user_reservations, only: [:index, :new, :show] do
+  resources :user_reservations, only: [:index, :new, :show, :update] do
     collection do
     get 'search'
     end

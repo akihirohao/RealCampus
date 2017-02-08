@@ -1,24 +1,25 @@
 <h1>案内学生一覧</h1>
 
-<% @reservation_time.each do |reservation|%>
 
-<%= reservation.time %>
-<%end%>
+  <h2><%= @time %></h2>
+
+  <% @reservations.each do |reservation| %>
+
+    <p>・ニックネーム</p>
+    <h3><%= link_to reservation.student.nickname, new_user_reservation_path(reservation.id) %></h3>
+
+    <p>・プロフィール写真</p>
+    <div class="student_image"><h3>
+      <%= link_to image_tag(reservation.student.avatar, size: "300x300"), new_user_reservation_path(reservation.id) %></h3>
+    </div>
+
+    <p>・学部</p>
+    <h3><%= reservation.student.department %></h3>
+
+    <p>_______________________________________________</p>
+
+   <%end%>
 
 
 
 
-
-<!-- マッチングした時間を表示する -->
- <h1><%= @reservation_time[:time] %></h1>
-
-<!-- 表示するのは、検索結果3つだけ
-内容：student_id     nickname/avatar/department -->
-<%= @karams.each do |students| %>
-
-<%= link_to 'students.nickname', new_user_reservation_path %>
-<%= link_to image_tag('students.avatar', { :border => '0', :alt => 'student選択'}), new_user_reservation_path %>
-<%= students.department %>
-
-<!--   <h1><%= reservation %></h1> -->
-<% end %>

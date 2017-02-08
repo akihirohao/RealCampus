@@ -11,8 +11,5 @@ module RealCumpus
 
     config.active_record.raise_in_transactional_callbacks = true
 
-    config.time_zone = 'Tokyo'
-    config.active_record.default_timezone = :local
-
   end
 end

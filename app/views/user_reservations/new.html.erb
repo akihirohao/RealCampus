@@ -4,16 +4,19 @@
 <%= @time %>
 
 <!-- 指定されたstudentのnicknameとavatarを表示する -->
-<%= @user.nickname %>
-<%= @user.avatar %>
+   <h2><%= @reservation.student.nickname %></h2>
+
+   <div class="student_image">
+   <h2>
+     <%= image_tag(@reservation.student.avatar , size: "300x300") %>
+   </h2>
+   </div>
 
 <!-- 後で集合場所の写真をリンクに貼る -->
-<p>集合場所・地図</p>
+   <h2>集合場所・地図</h2>
 
-<!-- "マッチング！"ボタンが押されると,statusが1に,user_idがログイン中のidに更新される -->
-<%= form_for @reservation, url: user_reservation_path  do |f| %>
-  <p>最終確認！</p>
-  <%= f.hidden_field :status, value: 1 %>
-  <%= f.hidden_field :user_id, value:"#{current_user_id}" %>
-  <%= f.submit 'マッチング！' %>
-<% end %>
+    <%= form_for @reservation, url: user_reservation_path do |f| %>
+     <%= f.hidden_field :status, value: 1 %>
+     <%= f.hidden_field :user_id, value:"#{current_user_id}" %>
+     <%= f.submit, "この学生に案内してもらう！" %>
+   <% end %>

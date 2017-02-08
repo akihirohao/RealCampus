@@ -13,7 +13,7 @@
 <h2>チャット投稿フォーム</h2>
     <!-- コメント機能をここに コメントできるのは二人だけ -->
     <!-- 背景はキャンパスの写真 -->
-           <%= form_for [@chat, @chat_reservation] do |f| %>
+           <%= form_for @chat do |f| %>
               <div style="margin: 8px 0">
                 <%= f.text_area :text, placeholder: '挨拶をしよう！', style: 'width: 100%;height: 300px;' %>
               </div>

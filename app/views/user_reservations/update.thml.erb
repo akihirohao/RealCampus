@@ -1,0 +1,4 @@
+<%= form_for @reservation, method: :patch  do |f| %>
+    <%= f.hidden_field :status, value: 1 %>
+    <%= f.hidden_field :user_id, value:"#{current_user_id}" %>
+<% end %>
