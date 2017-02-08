@@ -15,8 +15,4 @@
 <!-- 後で集合場所の写真をリンクに貼る -->
    <h2>集合場所・地図</h2>
 
-    <%= form_for @reservation, url: user_reservation_path do |f| %>
-     <%= f.hidden_field :status, value: 1 %>
-     <%= f.hidden_field :user_id, value:"#{current_user_id}" %>
-     <%= f.submit, "この学生に案内してもらう！" %>
-   <% end %>
+  <%= link_to "投稿する！", user_reservation_path(@reservation), method: :patch %>

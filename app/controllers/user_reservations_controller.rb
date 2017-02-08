@@ -14,9 +14,8 @@ class UserReservationsController < ApplicationController
   end
 
   def update
-    @reservation = 
-    Reservation.update(reservation_params)
-    redirect_to action: :show
+    Reservation.find(params[:id]).update(:status => 1, :user_id => current_user.id)
+    redirect_to :action => 'show', :id => params[:id]
   end
 
   def search
@@ -35,13 +34,4 @@ class UserReservationsController < ApplicationController
     redirect_to action: :show
   end
 
-  private
-    def reservation_params
-      params.require(:reservation).permit(:status).merge(user_id: current_user.id)
-    end
-  end
-
-  # private
-  # def create_params
-  #   params.requre(:chat).permit(:text, :reservation, :user_id, :student_id).merge(reservation: 検索結果のreservation.id!, student_id: 検索結果の？？？student.id, :user_id: current_user.id)
-  # end
+end
