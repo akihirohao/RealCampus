@@ -14,10 +14,10 @@
 ActiveRecord::Schema.define(version: 20170205050712) do
 
   create_table "chats", force: :cascade do |t|
-    t.text    "text",        limit: 65535
-    t.integer "reservation", limit: 4
-    t.integer "user_id",     limit: 4
-    t.integer "student_id",  limit: 4
+    t.text    "text",           limit: 65535
+    t.integer "reservation_id", limit: 4
+    t.integer "user_id",        limit: 4
+    t.integer "student_id",     limit: 4
   end
 
   create_table "reservations", force: :cascade do |t|

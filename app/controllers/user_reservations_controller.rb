@@ -2,8 +2,8 @@ class UserReservationsController < ApplicationController
 
   def index
 # ヒットした3つだけを取得したい
-    @reservation_time = Reservation.search(params[:q])
-    @reservations = @reservation_time.result.limit(3)
+    @reservation_time = Reservation.search(params[:q]).result
+    @reservations = @reservation_time.where(status: 0).limit(3)
 
     @time = params[:q][:time_eq]
   end
@@ -24,14 +24,23 @@ class UserReservationsController < ApplicationController
   end
 
   def show
-    @chat = Chat.new
-    # @chat_reservation = Chat.find(params[:reservation_id])
     @reservation = Reservation.find(params[:id])
+    @chat = Chat.new
+    # 表示するchatを更新したものを上に来るようにする
+    @chat_order = @reservation.chats.order('id DESC')
   end
 
   def create
-    Chat.create(create_params)
-    redirect_to action: :show
+    Chat.create(chat_params)
+    redirect_to user_reservation_path(params[:chat][:reservation_id])
   end
+
+  private
+  def chat_params
+    @reservation = Reservation.find(params[:chat][:reservation_id])
+    params.require(:chat).permit(:text).merge(reservation: @reservation, user_id: current_user.id, student_id: @reservation.student.id)
+  end
+
+
 
 end

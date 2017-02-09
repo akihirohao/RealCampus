@@ -1,39 +1,48 @@
 <h1>Have a nice day!!!</h1>
-
-  <%= @time %>
-
 <!-- 指定されたstudentのnicknameとavatarを表示する -->
-<%= @user.nickname %>
-<%= @user.avatar %>
+<h2>日程と案内する学生</h2>
+
+<p>・日程</p>
+<p><%= @reservation.time %></p>
+
+<p>・案内する学生のニックネーム</p>
+<p><%= @reservation.student.nickname %></p>
+
+<p>・学生のプロフィール画像</p>
+<p><%= image_tag(@reservation.student.avatar, size: "300x300") %></p>
 
 <!-- 後で集合場所の写真をリンクに貼る -->
-<p>集合場所・地図</p>
+<p>・集合場所（地図）</p>
 
 <h2>案内してくれる学生とチャットしてみよう！</h2>
 <h2>チャット投稿フォーム</h2>
-    <!-- コメント機能をここに コメントできるのは二人だけ -->
-    <!-- 背景はキャンパスの写真 -->
-           <%= form_for @chat do |f| %>
+         <%= form_for @chat, url: user_reservations_path, method: :post do |f| %>
               <div style="margin: 8px 0">
                 <%= f.text_area :text, placeholder: '挨拶をしよう！', style: 'width: 100%;height: 300px;' %>
               </div>
               <div class="row">
                 <div class="col10 push1">
+
+                <%= f.hidden_field :reservation_id, value: params[:id] %>
+
                   <%= button_tag type: "submit", class: "btn btn--block" do %>
                     投稿する<i class="icon-arrow-right"></i>
-           <% end %>
+                   <% end %>
+          <% end %>
 
+<!-- @Chat_list = Chat.lenght
+if @Chat_list  -->
 
-<h2>チャット一覧</h2>
-              <% @reservation.chats.each do |chat| %>
+<h2>コメント一覧</h2>
+        <ul style="padding: 0">
+                <% @chat_order.each do |chat| %>
                   <li style="border-bottom: dotted 1px">
-                    <div class="thumbnail__caption">
-                      <h3 class="text-xsmall text-overflow" title="<%= chat.user.nickname %>">
-                        <%= chat.user.nickname %>
-                      </h3>
-                      <p>
+
+                      <p>・<%= chat.user.nickname %></p>
+                      <p><%= image_tag chat.user.avatar, size: "100x100" %></p>
+                      <h4 class="text-xsmall text-overflow" title="<%= chat.text %>">
                         <%= chat.text %>
-                      </p>
-                    </div>
+                      </h4>
                   </li>
                 <% end %>
+              </ul>

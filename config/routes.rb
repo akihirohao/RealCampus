@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   resources :top, only: :index
 
-  resources :user_reservations, except: [:edit, :create, :destroy] do
+  resources :user_reservations, except: [:edit, :destroy] do
     collection do
     get 'search'
     end
