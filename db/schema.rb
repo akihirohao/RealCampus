@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170205050712) do
+ActiveRecord::Schema.define(version: 20170209132619) do
 
   create_table "chats", force: :cascade do |t|
     t.text    "text",           limit: 65535
     t.integer "reservation_id", limit: 4
     t.integer "user_id",        limit: 4
     t.integer "student_id",     limit: 4
+    t.text    "name",           limit: 65535
   end
 
   create_table "reservations", force: :cascade do |t|

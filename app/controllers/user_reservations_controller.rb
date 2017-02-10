@@ -38,7 +38,7 @@ class UserReservationsController < ApplicationController
   private
   def chat_params
     @reservation = Reservation.find(params[:chat][:reservation_id])
-    params.require(:chat).permit(:text).merge(reservation: @reservation, user_id: current_user.id, student_id: @reservation.student.id)
+    params.require(:chat).permit(:text, :name).merge(reservation_id: @reservation.id, user_id: current_user.id)
   end
 
 

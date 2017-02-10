@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>RealCumpus</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
 
+<body>
 
 <header class="header">
     <div class="header__bar row">
@@ -16,29 +23,22 @@
         </div>
       <% end %>
 
-
       <% if student_signed_in? %>
         <div class="student_nav grid-6">
+          <div class="student_logout">
           <%= link_to "学生ログアウト", destroy_student_session_path, method: :delete %>
+          </div>
+          <div class="student_show">
+          <%= link_to "予約受付マイページ", student_mypages_path(current_student.id) %>
+          </div>
         </div>
       <% else %>
         <div class="grid-6">
           <%= link_to "学生ログイン", new_student_session_path, class: 'post' %>
         </div>
       <% end %>
-
-
     </div>
   </header>
-
-
-<head>
-  <title>RealCumpus</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
 <%= yield %>
 

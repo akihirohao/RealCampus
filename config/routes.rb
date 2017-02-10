@@ -21,6 +21,8 @@ Rails.application.routes.draw do
     get 'search'
     end
   end
-  resources :student_reservations, only: [:new, :create]
+  resources :student_reservations, except: [:edit, :destroy]
+
+  resources :student_mypages, only: [:index, :create, :show]
 
 end
