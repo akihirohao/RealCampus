@@ -1,12 +1,12 @@
-<h1>案内学生一覧</h1>
+<div class="user_reservation_index">
+<h1>検索結果一覧</h1>
 
-
-  <h2><%= @time %></h2>
+  <h2>検索日程: <%= @time %></h2>
 
   <% @reservations.each do |reservation| %>
 
     <p>・ニックネーム</p>
-    <h3><%= link_to reservation.student.nickname, new_user_reservation_path(reservation.id) %></h3>
+    <div class="user_reservation_student_image"><%= link_to reservation.student.nickname, new_user_reservation_path(reservation.id) %></div>
 
     <p>・プロフィール写真</p>
     <div class="student_image"><h3>
@@ -19,7 +19,4 @@
     <p>_______________________________________________</p>
 
    <%end%>
-
-
-
-
+</div>

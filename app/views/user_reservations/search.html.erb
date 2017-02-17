@@ -1,12 +1,17 @@
-<h1>カルフォルニア大学バークレー校</h1>
+<div class="user_reservation_search">
+  <h1>カルフォルニア大学バークレー校</h1>
 
-<%= image_tag 'images.jpg', class:"california_uni_img" %>
+  <p>バークレー校に行く日程を入力して案内してくれる学生を探そう！</p>
 
-<%= search_form_for @q, url: user_reservations_path do |f| %>
+  <%= search_form_for @q, url: user_reservations_path do |f| %>
 
-  <%= f.label :time_eq, '時間'  %>
-  <%= f.date_field :time_eq, class: "form-control", placeholder: "マッチング" %>
+    <%= f.label :time_eq, '時間'  %>
+    <%= f.date_field :time_eq, class: "form-control", placeholder: "マッチング" %>
 
-  <%= f.submit '検索しますね！' %>
+    <%= f.submit '検索しますね！' %>
 
-<% end %>
+  <% end %>
+
+  <div class="user_reservation_search_image"></div>
+
+</div>

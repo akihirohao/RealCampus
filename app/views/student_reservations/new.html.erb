@@ -1,12 +1,17 @@
-<h1>案内時間 登録フォーム</h1>
+<div class="shift_form">
 
-<!-- carender機能 -->
+  <div class="shift_form_title"><登録フォーム></div>
+    <%= form_for @reservation, url: student_reservations_path  do |f| %>
+       <div class="shift_form_shorttitle">
+        <p>案内したい時間を登録しよ！</p>
+       </div>
+        <%= f.date_field :time %>
+        <%= f.hidden_field :status, value: 0%>
+        <%= f.submit %>
 
-<%= form_for @reservation, url: student_reservations_path  do |f| %>
+    <% end %>
 
-  <p>案内できる時間を登録しよ！</p>
-  <%= f.date_field :time %>
-  <%= f.hidden_field :status, value: 0%>
-  <%= f.submit %>
+  <div class="shift_form_image">
+  </div>
 
-<% end %>
+</div>

@@ -9,38 +9,38 @@
 
 <body>
 
-<header class="header">
-    <div class="header__bar row">
-      <h1 class="grid-6"><a href="/">RealCumpus</a></h1>
+<header class="header clearfix">
+  <div class="header__bar">
+    <h1 class="header_title"><a href="/">RealCumpus</a></h1>
 
-      <% if user_signed_in? %>
-        <div class="user_nav grid-6">
-          <%= link_to "ユーザーログアウト", destroy_user_session_path, method: :delete %>
-        </div>
-      <% else %>
-        <div class="grid-6">
-          <%= link_to "ユーザーログイン", new_user_session_path, class: 'post' %>
-        </div>
-      <% end %>
+    <% if user_signed_in? %>
+      <div class="user_nav grid-6">
+        <h2><%= link_to "ユーザーログアウト", destroy_user_session_path, method: :delete %></h2>
+      </div>
+    <% else %>
+      <div class="grid-6">
+        <h2><%= link_to "ユーザーログイン", new_user_session_path, class: 'post' %></h2>
+      </div>
+    <% end %>
 
-      <% if student_signed_in? %>
-        <div class="student_nav grid-6">
-          <div class="student_logout">
-          <%= link_to "学生ログアウト", destroy_student_session_path, method: :delete %>
-          </div>
-          <div class="student_show">
-          <%= link_to "予約受付マイページ", student_mypages_path(current_student.id) %>
-          </div>
+    <% if student_signed_in? %>
+      <div class="grid-6">
+        <div class="student_logout">
+        <h2><%= link_to "学生ログアウト", destroy_student_session_path, method: :delete %></h2>
         </div>
-      <% else %>
-        <div class="grid-6">
-          <%= link_to "学生ログイン", new_student_session_path, class: 'post' %>
-        </div>
-      <% end %>
-    </div>
-  </header>
+      </div>
+      <div class="grid-6">
+        <h2><%= link_to "学生マイページ", student_mypages_path(current_student.id) %></h2></div>
+      </div>
+    <% else %>
+      <div class="grid-6">
+        <h2><%= link_to "学生ログイン", new_student_session_path, class: 'post' %></h2>
+      </div>
+    <% end %>
+  </div>
+</header>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>

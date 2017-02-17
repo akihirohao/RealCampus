@@ -1,26 +1,172 @@
-// Place all the styles related to the TopContoller controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.header__bar.row.comp {
-    height: 61px;
-    line-height: 61px;
-    border-left: 1px solid #dce0e0;
-    position: relative;
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
 }
 
-.grid-6.a.comp {
-    border-left: 0;
-    float: left;
+header {
+  height: 100px;
 }
 
-.user_nav.grid-6 {
+.header_title {
   float: left;
 }
 
+.grid-6 {
+  float: right;
+  margin: 10px 0 0 10px;
+}
 
-.Userlogin {
-  height: 40px;
-  width: 45;
+// top_indexページ
+.top {
+  height: 650px;
+  margin: 0 auto;
+  color: white;
+  background: url(splash.jpg) center center / cover no-repeat fixed;
+}
+
+.servise_name {
+  height: 350px;
+}
+
+.topcontent-user {
+  width: 300px;
+  float: left;
+  margin: 50px 0 0 300px;
+}
+
+.topcontent-student {
+  width: 500px;
+  float: right;
+  margin: 50px 200px 0 0;
+}
+
+.top_realcampus {
+   font-family: fantasy;
+   font-size: 100px;
+   text-align: center;
+}
+
+.top_title {
+   font-size: 40px;
+   text-align: center;
+   color: white;
+}
+
+.link-color {
+  float: left;
+  margin: 0;
+  color: white;
+  text-decoration: none;
+}
+
+.link-color2 {
+  margin: 0 0 0 100px;
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+
+// 学生シフト登録フォーム
+.shift_form_title {
+  color: blue;
+  font-size: 50px;
+  margin: 0 auto;
+}
+
+.shift_form {
+  height: 500px;
+  text-align: center;
+}
+
+.shift_form_shorttitle {
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.shift_form_image {
+  height: 650px;
+  margin: 15px 0 0 0;
+  background: url(h1.jpg) center center / cover no-repeat fixed;
+}
+
+// 学生シフトcreate
+.student_create {
+  height: 650px;
+  color: white;
+  text-align: center;
+  background: url(IMG_meiban02.JPG) center center / cover no-repeat fixed;
+}
+
+// ユーザー登録
+.user_reservation_search {
+  text-align: center;
+
+}
+
+.user_reservation_search_image {
+  height: 650px;
+  margin: 15px 0 0 0;
+  background: url(UC-Berkeley.jpg) center center / cover no-repeat fixed;
+}
+
+.user_reservation_index {
+  color: white;
+  text-align: center;
+  background: url(09df227d.jpg) center center / cover no-repeat fixed;
+}
+
+
+.user_reservation_new {
+  text-align: center;
+}
+
+
+// 集合場所の地図を示す！
+.user_reservation_show_image1{
+  height: 500px;
+  margin: 15px 0 0 0;
+}
+
+// リアルな写真を貼る
+.user_reservation_show_image2 {
+  height: 500px;
+  margin: 15px 0 0 0;
+}
+
+// チャットルーム
+.reservation_text {
+  text-align: center;
+}
+
+.havaaniceday {
+  font-size: 70px;
+  color: blue;
+}
+
+.chats {
+  text-align: center;
+  // background: url(UC_Logo.jpg) center center / cover no-repeat fixed;
+}
+
+// student mypage
+// 左右にあるスペースに画像などを入れる形にする。
+.student_mypage {
+  text-align: center;
+}
+
+.student_mypage_reservation_title {
+  font-size: 50px;
+}
+
+.student_mypage_shift {
+  font-size: 50px;
+  margin: 50px 0 0 0;
+}
+
+.shift_table {
+  color: white;
+  background: url(0NMfl213.jpg) center center / cover no-repeat fixed;
 }
 

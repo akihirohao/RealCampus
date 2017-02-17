@@ -2,6 +2,7 @@ class StudentMypagesController < ApplicationController
 
   def index
     @reservation = Reservation.where(status: 1).where(student_id: current_student.id)
+    @reservations = @reservation.order('time ASC')
     @reservation_shift = Reservation.where(student_id: current_student.id).order('time ASC')
   end
 
