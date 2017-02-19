@@ -7,8 +7,9 @@
 
     <%= f.label :time_eq, '時間'  %>
     <%= f.date_field :time_eq, class: "form-control", placeholder: "マッチング" %>
-
-    <%= f.submit '検索しますね！' %>
+    <div class="actions">
+        <input type="submit" name="commit" value="検索します！">
+    </div>
 
   <% end %>
 

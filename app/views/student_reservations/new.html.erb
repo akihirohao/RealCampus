@@ -7,7 +7,9 @@
        </div>
         <%= f.date_field :time %>
         <%= f.hidden_field :status, value: 0%>
-        <%= f.submit %>
+        <div class="actions">
+        <input type="submit" name="commit" value="日程入力完了">
+        </div>
 
     <% end %>
 

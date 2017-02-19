@@ -35,9 +35,9 @@
 
                     <%= f.hidden_field :reservation_id, value: params[:id] %>
 
-                      <%= button_tag type: "submit", class: "btn btn--block" do %>
-                        投稿する<i class="icon-arrow-right"></i>
-                       <% end %>
+                 <div class="actions">
+                     <input type="submit" name="commit" value="投稿する！">
+                 </div>
               <% end %>
 
     <% unless @reservation.chats.blank? %>
