@@ -25,4 +25,6 @@ Rails.application.routes.draw do
 
   resources :student_mypages, only: [:index, :create, :show, :update]
 
+  resources :user_mypages, only: [:index, :create, :show, :update]
+
 end

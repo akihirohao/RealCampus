@@ -1,0 +1,24 @@
+<div class="student_mypage">
+    <div class="student_mypage_reservation_title"><予約一覧></div>
+
+      <% @reservations.each do |reservation| %>
+
+        <h2><%= reservation.time %></h2>
+        <p>・ニックネーム</p>
+        <h3><%= link_to reservation.student.nickname, user_mypage_path(reservation.id) %></h3>
+        <p>・プロフィール写真</p>
+        <div class="user_image"><h3>
+          <%= link_to image_tag(reservation.student.avatar, size: "300x300"), user_mypage_path(reservation.id) %></h3>
+        </div>
+        <p>_______________________________________________</p>
+
+       <%end%>
+
+    <div class="shift_table">
+       <div class="student_mypage_shift"><マッチング日程一覧></div>
+       <% @reservation_shift.each do |reservation| %>
+
+           <p><%= reservation.time %></p>
+       <% end %>
+    </div>
+</div>

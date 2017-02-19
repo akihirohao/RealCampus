@@ -1,0 +1,31 @@
+<div class="student_mypage_show">
+    <h2>キャンパスで案内してくれる<%= @reservation.student.nickname %>さんとチャットしよう！</h2>
+    <h2><チャット投稿フォーム></h2>
+             <%= form_for @chat, url: user_mypages_path, method: :post do |f| %>
+                  <div style="margin: 8px 0">
+                    <%= f.text_area :text, placeholder: '挨拶しよう！', style: 'width: 75%;height: 100px;' , class: 'chat_text_size'%>
+                  </div>
+                      <%= f.hidden_field :name, value: current_user.nickname %>
+                      <%= f.hidden_field :reservation_id, value: params[:id] %>
+                      <%= button_tag type: "submit", class: "btn btn--block" do %>
+                        投稿する<i class="icon-arrow-right"></i>
+                       <% end %>
+              <% end %>
+
+    <% unless @reservation.chats.blank? %>
+
+          <h2><コメント一覧></h2>
+                  <ul style="padding: 0">
+                          <% @chat_order.each do |chat| %>
+                                    <li style="border-bottom: dotted 1px">
+                                        <p><%= chat.name %></p>
+                                        <p><%= chat.text %></p>
+                                        </h4>
+                                    </li>
+                          <% end %>
+                  </ul>
+              <%= link_to "#{@reservation.student.nickname}さんとの予約を解消する。", user_mypage_path(@reservation), method: :patch , class: 'delete_bottom'%>
+    <% end %>
+
+
+</div>

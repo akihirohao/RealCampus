@@ -17,6 +17,9 @@
       <div class="user_nav grid-6">
         <h2><%= link_to "ユーザーログアウト", destroy_user_session_path, method: :delete %></h2>
       </div>
+      <div class="grid-6">
+        <h2><%= link_to "ユーザーマイページ", user_mypages_path(current_user.id) %></h2></div>
+      </div>
     <% else %>
       <div class="grid-6">
         <h2><%= link_to "ユーザーログイン", new_user_session_path, class: 'post' %></h2>

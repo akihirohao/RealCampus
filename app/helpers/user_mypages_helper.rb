@@ -1,0 +1,2 @@
+module UserMypagesHelper
+end
