@@ -6,7 +6,7 @@
   <% @reservations.each do |reservation| %>
 
     <p>・ニックネーム</p>
-    <div class="user_reservation_student_image"><%= link_to reservation.student.nickname, new_user_reservation_path(reservation.id) %></div>
+    <div class="user_reservation_student_image"><%= link_to reservation.student.nickname, new_user_reservation_path(reservation.id), class: 'link-nickname' %></div>
 
     <p>・プロフィール写真</p>
     <div class="student_image"><h3>

@@ -5,7 +5,7 @@
 }
 
 header {
-  height: 100px;
+  height: 120px;
 }
 
 .header_title {
@@ -29,21 +29,14 @@ header {
   height: 350px;
 }
 
-.topcontent-user {
-  width: 300px;
-  float: left;
-  margin: 50px 0 0 300px;
-}
-
-.topcontent-student {
-  width: 500px;
-  float: right;
-  margin: 50px 200px 0 0;
+.toplogin {
+    width: 100%;
+    text-align: center;
 }
 
 .top_realcampus {
    font-family: fantasy;
-   font-size: 100px;
+   font-size: 145px;
    text-align: center;
    padding: 100px 0 0 0;
 }
@@ -51,29 +44,37 @@ header {
 .top_title {
    font-size: 40px;
    text-align: center;
+   margin-top: 0px;
    color: white;
 }
 
 .link-color {
+  position: relative;
+  left: 20%;
   float: left;
-  margin: 0;
   color: white;
   text-decoration: none;
 }
 
+.Studentlogin {
+  margin-top: 140px;
+}
+
 .link-color2 {
-  margin: 0 0 0 100px;
-  float: left;
+  position: relative;
+  left: 10%;
   color: white;
   text-decoration: none;
+  margin-top: 90px;
 }
 
 
 // 学生シフト登録フォーム
 .shift_form_title {
-  color: blue;
+  color: #00BFFF;
   font-size: 50px;
-  margin: 0 auto;
+  text-align: center;
+  width: 100%;
 }
 
 .shift_form {
@@ -100,7 +101,11 @@ header {
   background: url(IMG_meiban02.JPG) center center / cover no-repeat fixed;
 }
 
-// ユーザー登録
+.student_create_text {
+  margin-top: 0px;
+}
+
+// ユーザー登録コントローラー
 .user_reservation_search {
   text-align: center;
 
@@ -121,6 +126,10 @@ header {
 
 .user_reservation_new {
   text-align: center;
+}
+
+.link-nickname {
+  color: white;
 }
 
 
@@ -171,6 +180,10 @@ header {
   background: url(0NMfl213.jpg) center center / cover no-repeat fixed;
 }
 
+.student_mypage_show {
+  text-align: center;
+}
+
 // ユーザーログイン設定
 .form_box {
     width: 100%;
@@ -178,7 +191,7 @@ header {
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
-    max-width: 660px;
+    max-width: 600px;
 }
 
 .form_box h2 {
@@ -188,12 +201,29 @@ header {
 }
 
 body {
-line-height: 1.57;
+    line-height: 2;
     letter-spacing: 0.15em;
     font-size: 16px;
     color: #666666;
     font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
     margin: 0;
+    background-color: #F0F8FF;
 }
 
+.form .label {
+  width: 100%;
+    margin: 5px 0 15px;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    font-family: "游ゴシック", "YuGothic";
+}
 
+.studentlogin {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 600px;
+}
