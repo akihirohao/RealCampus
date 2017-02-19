@@ -45,6 +45,7 @@ header {
    font-family: fantasy;
    font-size: 100px;
    text-align: center;
+   padding: 100px 0 0 0;
 }
 
 .top_title {
@@ -169,4 +170,30 @@ header {
   color: white;
   background: url(0NMfl213.jpg) center center / cover no-repeat fixed;
 }
+
+// ユーザーログイン設定
+.form_box {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 660px;
+}
+
+.form_box h2 {
+    margin: 20px 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+body {
+line-height: 1.57;
+    letter-spacing: 0.15em;
+    font-size: 16px;
+    color: #666666;
+    font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+    margin: 0;
+}
+
 
