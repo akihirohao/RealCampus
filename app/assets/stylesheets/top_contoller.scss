@@ -10,11 +10,12 @@ header {
 
 .header_title {
   float: left;
+  margin: 20px;
 }
 
 .grid-6 {
   float: right;
-  margin: 10px 0 0 10px;
+  margin: 10px 10px 0 10px;
 }
 
 // top_indexページ
@@ -49,11 +50,14 @@ header {
 }
 
 .link-color {
-  position: relative;
-  left: 20%;
-  float: left;
-  color: white;
-  text-decoration: none;
+    position: relative;
+    left: 20%;
+    float: left;
+    color: white;
+    text-decoration: none;
+
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
 }
 
 .Studentlogin {
@@ -61,17 +65,19 @@ header {
 }
 
 .link-color2 {
-  position: relative;
-  left: 10%;
-  color: white;
-  text-decoration: none;
-  margin-top: 90px;
+    position: relative;
+    left: 10%;
+    color: white;
+    text-decoration: none;
+
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    padding: 10px 0 10px 0;
 }
 
 
 // 学生シフト登録フォーム
 .shift_form_title {
-  color: #00BFFF;
   font-size: 50px;
   text-align: center;
   width: 100%;
@@ -80,18 +86,35 @@ header {
 .shift_form {
   height: 500px;
   text-align: center;
+
+  height: 650px;
+  margin: 15px 0 0 0;
+  background: url(h1.jpg) center center / cover no-repeat fixed;
+}
+
+.shift_form input {
+  background: #F0F8FF;
+    border-top: 3px solid #DDD;
+    border-left: 3px solid #DDD;
+    border-right: 3px solid #BBB;
+    border-bottom: 3px solid #BBB;
+    color:#111;
+    width: 140px;
+    padding: 10px;
+    margin: 0 0 20px 0;
 }
 
 .shift_form_shorttitle {
   font-size: 20px;
   margin: 0 auto;
+  background-color: white;
 }
 
-.shift_form_image {
-  height: 650px;
-  margin: 15px 0 0 0;
-  background: url(h1.jpg) center center / cover no-repeat fixed;
-}
+// .shift_form_image {
+//   height: 650px;
+//   margin: 15px 0 0 0;
+//   background: url(h1.jpg) center center / cover no-repeat fixed;
+// }
 
 // 学生シフトcreate
 .student_create {
@@ -101,6 +124,10 @@ header {
   background: url(IMG_meiban02.JPG) center center / cover no-repeat fixed;
 }
 
+.student_create h1 {
+  padding-top: 10px;
+}
+
 .student_create_text {
   margin-top: 0px;
 }
@@ -108,7 +135,10 @@ header {
 // ユーザー登録コントローラー
 .user_reservation_search {
   text-align: center;
+}
 
+.user_reservation_search .actions input {
+  width: 185px;
 }
 
 .user_reservation_search_image {
@@ -117,16 +147,30 @@ header {
   background: url(UC-Berkeley.jpg) center center / cover no-repeat fixed;
 }
 
+.link-back {
+  color: white;
+  text-decoration: none;
+
+    font-size: 30px;
+    width: 100%;
+    margin: 5px 0 15px;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    font-family: "游ゴシック", "YuGothic";
+}
+
 .user_reservation_index {
   color: white;
   text-align: center;
+  min-height: 650px;
   background: url(igp4638.jpg) center center / cover no-repeat fixed;
 }
 
 
 .user_reservation_new {
   text-align: center;
-  background: url(UC_Logo.jpg) center center / cover no-repeat fixed;
+  // background: url(UC_Logo.jpg) center center / cover no-repeat fixed;
 }
 
 .user_reservation_new_time {
@@ -134,15 +178,15 @@ header {
 }
 
 .last_bottom {
-    background-color: white;
+    // background-color: white;
     color: black;
     font-size: 40px;
     width: 100%;
     margin: 0 auto;
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #d8d8d8;
     border-radius: 5px;
-    font-family: "游ゴシック", "YuGothic";
+    text-decoration: none;
 }
 
 .link-nickname {
@@ -170,6 +214,7 @@ header {
 .havaaniceday {
   font-size: 70px;
   color: #6495ED;
+  height: 100px;
 }
 
 .chats {
@@ -183,17 +228,25 @@ header {
   text-align: center;
 }
 
+.link-mypage {
+  margin-top: 10px;
+  color:white;
+  font-size: 35px;
+}
+
 .student_mypage_reservation_title {
-  font-size: 50px;
+  font-size: 40px;
+  margin-bottom: 0;
 }
 
 .student_mypage_shift {
-  font-size: 50px;
+  font-size: 40px;
   margin: 50px 0 0 0;
 }
 
 .shift_table {
   color: white;
+  min-height: 650px;
   background: url(0NMfl213.jpg) center center / cover no-repeat fixed;
 }
 
@@ -238,7 +291,7 @@ body {
 }
 
 .form .label {
-  width: 100%;
+    width: 100%;
     margin: 5px 0 15px;
     padding: 10px;
     border: 1px solid #d8d8d8;

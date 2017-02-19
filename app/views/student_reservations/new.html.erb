@@ -1,11 +1,11 @@
 <div class="shift_form">
 
-  <div class="shift_form_title"><登録フォーム></div>
+  <div class="shift_form_title">　　</div>
     <%= form_for @reservation, url: student_reservations_path  do |f| %>
        <div class="shift_form_shorttitle">
         <p>案内したい時間を登録しよ！</p>
        </div>
-        <%= f.date_field :time %>
+        <span><%= f.date_field :time %></span>
         <%= f.hidden_field :status, value: 0%>
         <div class="actions">
         <input type="submit" name="commit" value="日程入力完了">
@@ -13,7 +13,7 @@
 
     <% end %>
 
-  <div class="shift_form_image">
-  </div>
+<!--   <div class="shift_form_image">
+  </div> -->
 
 </div>

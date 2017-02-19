@@ -13,7 +13,7 @@
 
     <!-- 後で集合場所の写真をリンクに貼る -->
     <p>・集合場所（地図）</p>
-    <p></p>
+    <p>Center St, Berkeley, CA 94720</p>
 
     <div class="user_reservation_show_image1">
       <%= image_tag 'IMG_4975.JPG', size: "500x500" %>
@@ -29,7 +29,7 @@
              <%= form_for @chat, url: user_reservations_path, method: :post do |f| %>
                   <div style="margin: 8px 0">
                     <%= f.hidden_field :name, value: current_user.nickname %>
-                    <%= f.text_area :text, placeholder: '挨拶をしよう！', style: 'width: 100%;height: 300px;' %>
+                    <%= f.text_area :text, placeholder: 'キャンパスに行く前に自己紹介をしよう！', style: 'width: 100%;height: 100px;' %>
                   </div>
                   <div class="row">
                     <div class="col10 push1">
@@ -43,7 +43,7 @@
 
     <% unless @reservation.chats.blank? %>
 
-          <h2>コメント一覧</h2>
+          <h2><コメント一覧></h2>
                   <ul style="padding: 0">
                           <% @chat_order.each do |chat| %>
                             <li style="border-bottom: dotted 1px">

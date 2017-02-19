@@ -1,7 +1,13 @@
 <div class="student_create">
     <h1>連絡待ちだね！</h1>
     <div class="student_create_text">
-    <p>・ユーザーから予約が入れば、メールで通知するよ！</p>
-    <p>・ユーザーと一致した日にちはマイページで見れる！</p>
+    <!-- <p>・ユーザーから予約が入れば、メールで通知するよ！</p> -->
+    <p>・ユーザーと一致した日にちはマイページで見れるよ</p>
     </div>
+
+    <div class="studet_create_mypagelink">
+    <%= link_to 'マイページへ', student_mypages_path , class: 'link-mypage' %>
+    <p>マイページでマッチング表と登録した時間を確認する！</p>
+    </div>
+
 </div>
