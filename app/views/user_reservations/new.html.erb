@@ -1,10 +1,10 @@
 <div class="user_reservation_new">
-<h1>最終確認</h1>
+<h1><最終確認></h1>
 <!-- 検索された時間を表示する -->
-<%= @time %>
+<div class="user_reservation_new_time"><%= @time %></div>
 
 <!-- 指定されたstudentのnicknameとavatarを表示する -->
-   <h2><%= @reservation.student.nickname %></h2>
+   <h2>・<%= @reservation.student.nickname %>・</h2>
 
    <div class="student_image">
    <h2>
@@ -12,5 +12,5 @@
    </h2>
    </div>
 
-  <%= link_to "この学生にする！", user_reservation_path(@reservation), method: :patch %>
+  <%= link_to "この学生にする！", user_reservation_path(@reservation), method: :patch , class: 'last_bottom'%>
   </div>

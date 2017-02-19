@@ -120,12 +120,29 @@ header {
 .user_reservation_index {
   color: white;
   text-align: center;
-  background: url(09df227d.jpg) center center / cover no-repeat fixed;
+  background: url(igp4638.jpg) center center / cover no-repeat fixed;
 }
 
 
 .user_reservation_new {
   text-align: center;
+  background: url(UC_Logo.jpg) center center / cover no-repeat fixed;
+}
+
+.user_reservation_new_time {
+  font-size: 20px;
+}
+
+.last_bottom {
+    background-color: white;
+    color: black;
+    font-size: 40px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    font-family: "游ゴシック", "YuGothic";
 }
 
 .link-nickname {
@@ -152,7 +169,7 @@ header {
 
 .havaaniceday {
   font-size: 70px;
-  color: blue;
+  color: #6495ED;
 }
 
 .chats {
@@ -192,6 +209,16 @@ header {
     margin-top: 0;
     margin-bottom: 0;
     max-width: 600px;
+}
+
+.form_box input{
+    font-size: 20px;
+    width: 100%;
+    margin: 5px 0 15px;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    font-family: "游ゴシック", "YuGothic";
 }
 
 .form_box h2 {
@@ -239,4 +266,12 @@ body {
     padding: 5px 0;
 }
 
-
+.studentlogin input {
+    font-size: 20px;
+    width: 100%;
+    margin: 5px 0 15px;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    font-family: "游ゴシック", "YuGothic";
+}
