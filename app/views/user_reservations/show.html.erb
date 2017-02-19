@@ -29,7 +29,7 @@
              <%= form_for @chat, url: user_reservations_path, method: :post do |f| %>
                   <div style="margin: 8px 0">
                     <%= f.hidden_field :name, value: current_user.nickname %>
-                    <%= f.text_area :text, placeholder: 'キャンパスに行く前に自己紹介をしよう！', style: 'width: 100%;height: 100px;' %>
+                    <%= f.text_area :text, placeholder: 'キャンパスに行く前に自己紹介をしよう！', style: 'width: 75%;height: 100px;' %>
                   </div>
                   <div class="row">
                     <div class="col10 push1">

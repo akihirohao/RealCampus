@@ -23,6 +23,6 @@ Rails.application.routes.draw do
   end
   resources :student_reservations, except: [:edit, :destroy]
 
-  resources :student_mypages, only: [:index, :create, :show]
+  resources :student_mypages, only: [:index, :create, :show, :update]
 
 end

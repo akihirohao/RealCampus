@@ -13,6 +13,11 @@ header {
   margin: 20px;
 }
 
+footer {
+    height: 5px;
+    text-align: center;
+}
+
 .grid-6 {
   float: right;
   margin: 10px 10px 0 10px;
@@ -148,8 +153,8 @@ header {
 }
 
 .link-back {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 
     font-size: 30px;
     width: 100%;
@@ -193,6 +198,11 @@ header {
   color: white;
 }
 
+.havaaniceday {
+  font-size: 70px;
+  color: #6495ED;
+  height: 100px;
+}
 
 // 集合場所の地図を示す！
 .user_reservation_show_image1{
@@ -209,12 +219,6 @@ header {
 // チャットルーム
 .reservation_text {
   text-align: center;
-}
-
-.havaaniceday {
-  font-size: 70px;
-  color: #6495ED;
-  height: 100px;
 }
 
 .chats {
@@ -252,6 +256,16 @@ header {
 
 .student_mypage_show {
   text-align: center;
+}
+
+.chat_text_size {
+  height: 100px;
+}
+
+// 予約解消
+.delete_bottom {
+
+
 }
 
 // ユーザーログイン設定

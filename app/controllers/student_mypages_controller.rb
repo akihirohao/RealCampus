@@ -18,6 +18,11 @@ class StudentMypagesController < ApplicationController
     redirect_to student_mypage_path(params[:chat][:reservation_id])
   end
 
+  def update
+    Reservation.find(params[:id]).update(:status => 0, :user_id => "")
+    redirect_to :action => 'index'
+  end
+
   def chat_params
     @reservation = Reservation.find(params[:chat][:reservation_id])
     params.require(:chat).permit(:text, :name).merge(reservation_id: @reservation.id,  student_id: current_student.id)
